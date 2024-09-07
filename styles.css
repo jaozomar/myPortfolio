@@ -8,6 +8,7 @@
 body {
     color: rgb(255,255,255);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .bg {
@@ -15,6 +16,7 @@ body {
     background: linear-gradient(135deg, rgb(186, 173, 173) 0%, rgb(0,0,0) 100%);
     width: 100vw;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .bg::before {
@@ -25,18 +27,33 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: repeating-linear-gradient(rgba(255,255,255,.05) 0, rgba(255,255,255,.05) 4px,
+    background: repeating-linear-gradient(rgba(103, 76, 171,.5) 0, rgba(103, 76, 171,.5) 4px,
                                             transparent 4px, transparent 10px);
     opacity: 0.5;
     z-index: 1;
     animation: glitch 1s infinite linear;
     filter: blur(1px);
+    overflow: hidden;
 }
 
 @keyframes glitch {
     0% {background-position: 0 0;}
     50% {background-position: 0 10px;}
     100% {background-position: 0 20px;}
+}
+
+.static {
+    position: absolute;
+    inset: -100%;
+    z-index: 2;
+    background-image: url("images/static2.jpg");
+    opacity: 0.05;
+    animation: noise 0.2s linear infinite both;
+}
+
+@keyframes noise {
+    0% {transform: translateX(15%) translateY(15%);}
+    100% {transform: translateX(-15%) translateY(-15%);}
 }
 
 .cursor {
@@ -139,7 +156,7 @@ body {
         display: grid;
         grid-template-columns: auto;
         margin: 0;
-        height: 40vh;
+        height: 40.5vh;
         width: 100%;
         top: -1500px;
         position: absolute;
@@ -165,6 +182,7 @@ body {
         margin: 4px 0;
         background: rgb(225,225,225);
         z-index: 1000;
+        transition: all 0.2s ease-in-out;
     }
 
     #mobile {
@@ -174,16 +192,32 @@ body {
         flex-direction: column;
         top: 20px;
         right: 20px;
-        z-index: 1000;
+        transition: all 0.2s ease-in-out;
     }
 
-    
+    #mobile.active .bar:nth-child(1) {
+        transform: translateY(11.8px) rotate(45deg);
+    }
+
+    #mobile.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile.active .bar:nth-child(3) {
+        transform: translateY(-11.8px) rotate(-45deg);
+    }
+
+    #firstLink {
+        border-top: 2px solid white;
+    }
 
     .navLinks {
-        width: 80%;
+        width: 100%;
         text-align: center;
         padding: 1rem;
         display: table;
+        border-bottom: 2px solid white;
+        z-index: 1000;
     }
 }
 
@@ -248,9 +282,10 @@ body {
     width: 30vw;
     border-radius: 50px;
     height: auto;
-    animation: zoomIn 1.5s ease;
+    /*animation: zoomIn 1.5s ease;*/
 }
 
+/*
 @keyframes zoomIn {
     0% {
         transform: scale(0.6);
@@ -258,4 +293,15 @@ body {
     100% {
         transform: scale(1);
     }
+}*/
+
+.footerBar {
+    height: 30px;
+    background-color: rgb(103, 76, 171);
+}
+
+.endNote {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
 }
