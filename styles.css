@@ -8,14 +8,17 @@
 body {
     color: rgb(255,255,255);
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .bg {
     position: relative;
     background: linear-gradient(135deg, rgb(186, 173, 173) 0%, rgb(0,0,0) 100%);
     width: 100vw;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
+    flex: 1;
     overflow: hidden;
 }
 
@@ -116,7 +119,6 @@ body {
     align-items: center;
     text-align: center;
     list-style: none;
-    opacity: 1;
 }
 
 .navToggle {
@@ -144,6 +146,12 @@ body {
 
 /* FOR SMALL SCREENS */
 @media screen and (max-width: 800px) {
+
+    .myNav.goDark {
+        opacity: 0.95;
+        transition: all 0.3s ease;
+    }
+
     .navBar {
         justify-content: space-between;
         height: 100px;
@@ -156,18 +164,20 @@ body {
         display: grid;
         grid-template-columns: auto;
         margin: 0;
-        height: 40.5vh;
+        max-height: 60vh;
+        overflow-y: auto;
         width: 100%;
         top: -1500px;
         position: absolute;
         transition: all 0.2s ease;
         background-color: rgb(103, 76, 171);
+        opacity: 1;
     }
 
     .navMenu.active {
         top: 100%;
         transition: all 0.3s ease;
-        opacity: 0.8;
+        opacity: 1;
         z-index: 999;
     }
 
@@ -207,17 +217,21 @@ body {
         transform: translateY(-11.8px) rotate(-45deg);
     }
 
-    #firstLink {
-        border-top: 2px solid white;
-    }
-
     .navLinks {
         width: 100%;
         text-align: center;
         padding: 1rem;
         display: table;
-        border-bottom: 2px solid white;
         z-index: 1000;
+    }
+    
+    .navItem {
+        width: 100%;
+        border-bottom: 1px solid white;
+    }
+
+    .navItem:first-child {
+        border-top: 1px solid white;
     }
 }
 
@@ -279,7 +293,7 @@ body {
 }*/
 
 .myPhoto {
-    width: 30vw;
+    width: 25vw;
     border-radius: 50px;
     height: auto;
     /*animation: zoomIn 1.5s ease;*/
