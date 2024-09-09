@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Joshua's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>About Me :]</h1>
+    <div class="bg">
+        <div class="static"></div>
+<!---------------------- Navigation Bar ------------------------->
+        <header>
+            <nav class="myNav">
+                <div class="navBar">
+                    <a href="index.html" id="navLogo">[Joshua]</a>
+                    <div class="navToggle" id="mobile">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navMenu">
+                        <li class="navItem">
+                            <a href="aboutMe.html" class="navLinks">|About Me|</a>
+                        </li>
+                        <li class="navItem">
+                            <a href="/" class="navLinks">|Projects|</a>
+                        </li>
+                        <li class="navItem">
+                            <a href="/" class="navLinks">|Contact|</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <script src="script.js"></script>
+        </header>
+        <section class="about">
+            <h1 class="retro" id="title2">About Me:</h1>
+
+            <!-----------------About---------------------->
+            <div class="aboutContainer">
+                <div class="row">
+                    <div class="firstHalf">
+                        <p>
+                           Hello, I am Joshua! I am a soon-to-be graduate with a B.S. in Computer Science
+                           from the University of California, Davis. I have worked on cool Projects
+                           involving the use of data structures, object-oriented programming, and even the
+                           MASK-RCNN machine learning model. I am always looking to add to my computer
+                           science skill set!
+                        </p>
+                        <p>
+                            Outside of coding, I enjoy running, working out, and watching sports! My time
+                            on the UC Davis Cross Country and Track Club allowed me to express my
+                            competitive drive while making many new friends! I also enjoy retro and vintage
+                            aesthetics, which have influenced my fashion tastes and love for old video games.
+                            This aesthetic has even influenced the design of this website!
+                        </p>
+                        <p>
+                            Whether you are here to check out my skills or just to network, I'd love to connect!
+                        </p>
+                    </div>
+                    <div class="secondHalf">
+                        <img src="images/aboutMe.png">
+                    </div>
+                </div>
+                <div class="detailsDiv">
+                    <h2 class="retro">Skills</h2>
+                    <h3 class="retro">Languages:</h3>
+                    <ul class="skills">
+                        <li>C++ (Proficient)</li>
+                        <li>Python (Proficient)</li>
+                        <li>Java (Proficient)</li>
+                        <li>C (Intermediate)</li>
+                        <li>R (Intermediate)</li>
+                        <li>HTML (Intermediate)</li>
+                        <li>CSS (Intermediate)</li>
+                        <li>JavaScript (Intermediate)</li>
+                        <li>Haskell (Familiar With)</li>
+                        <li>Erlang (Familiar With)</li>
+                        <li>Prolog (Familiar With)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footerBar">
+            <p class="endNote">Joshua Alexander Ozomaro 2024</p>
+        </div>
+    </footer>
 </body>
 </html>
