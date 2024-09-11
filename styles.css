@@ -502,7 +502,7 @@ body {
         flex-basis: 100%;
     }
 
-    .footerBar {
+    #bigOnMobile {
         height: 60px;
     }
 }
