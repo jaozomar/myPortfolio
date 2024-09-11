@@ -27,6 +27,7 @@ body {
 
 .bg {
     position: relative;
+    z-index: 1;
     background: linear-gradient(135deg, rgb(186, 173, 173) 0%, rgb(0,0,0) 100%);
     width: 100vw;
     overflow: hidden;
@@ -324,20 +325,41 @@ body {
 }*/
 
 .footerBar {
-    height: 30px;
+    position: relative;
+    z-index: 10;
+    height: 41px;
     background-color: rgb(103, 76, 171);
 }
 
-.endNote {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.footerBar p {
+    padding-top: 0px;
+    padding-bottom: 0px;
     text-align: center;
+}
+
+.footerBar p:nth-child(1) {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.footerBar p:nth-child(2) {
+    padding-bottom: 5px;
+    font-size: 10px;
+}
+
+.footerBar a {
+    color: inherit;
+}
+
+.footerBar a:hover {
+    color: cyan;
 }
 
 #title2 {
     margin-top: 20px;
     font-size: 50px;
     text-align: center;
+    color: rgb(200,3,200);
 }
 
 .aboutContainer {
@@ -357,7 +379,7 @@ body {
     border-image: linear-gradient(135deg, rgb(200,3,200), white) 1;
 }
 
-.firstHalf p {
+.pFont {
     color: white;
     font-family: monospace;
     font-size: 15px;
@@ -370,25 +392,117 @@ body {
 .secondHalf img {
     border-radius: 100%;
     width: 100%;
-    border: 5px double gold;
+    border: 5px double rgb(200,3,200);
 }
 
 .detailsDiv {
-    margin: 40px auto;
     text-align: center;
     font-size: 20px;
+}
+
+.detailsDiv h2 {
+    padding-top: 40px;
+    color: rgb(200,3,200);
 }
 
 .detailsDiv h3 {
     padding-top: 5px;
 }
 
-.detailsDiv ul {
-    list-style: none;
+.skills {
     padding-top: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 
-.detailsDiv ul li{
-    margin-bottom: 10px;
-    color: gold;
+
+.skills figure {
+    position: relative;
+    z-index: 10;
+}
+
+.skills figure img {
+    position: relative;
+    z-index: 10;
+    object-fit: contain;
+    width: 70px;
+    height: 70px;
+    transition: transform 0.2s ease;
+}
+
+.skills figure img:hover {
+    transform: scale(1.2);
+}
+
+.skills figcaption {
+    object-fit: contain;
+    font-size: 13px;
+}
+
+.education {
+    padding-top: 20px;
+}
+
+.education h5, .workBox h5 {
+    padding-bottom: 20px;
+}
+
+.firstHalfEducation {
+    flex-basis: 47.5%;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, rgb(200,3,200), white) 1;
+}
+
+.secondHalfEducation {
+    flex-basis: 47.5%;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, rgb(200,3,200), white) 1;
+}
+
+.workExperience {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.workBox {
+    padding: 10px 20px;
+    width: 50%;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, rgb(200,3,200), white) 1;
+}
+
+@media screen and (max-width: 800px) {
+    .myPhoto {
+        width: 40vw;
+        height: auto;
+    }
+
+    .firstHalf {
+        flex-basis: 100%;
+    }
+
+    .secondHalf {
+        padding-top: 20px;
+        flex-basis: 100%;
+    }
+
+    .firstHalfEducation {
+        flex-basis: 100%;
+    }
+
+    .secondHalfEducation {
+        flex-basis: 100%;
+    }
+
+    .workBox {
+        flex-basis: 100%;
+    }
+
+    .footerBar {
+        height: 47px;
+    }
 }
