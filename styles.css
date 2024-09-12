@@ -511,7 +511,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 15px;
+    font-size: 1.5vw;
     width: 100%;
     height: 100%;
     padding: 50px 50px;
@@ -523,15 +523,9 @@ body {
 
 .overlay p, .overlay ul {
     padding-bottom: 15px;
+    word-wrap:break-word;
 }
 
-.overlay:hover {
-    opacity: 0.9;
-}
-
-.overlay.active {
-    opacity: 0.9;
-}
 
 .projects figure figcaption a {
     z-index: 10;
@@ -564,6 +558,21 @@ body {
     background-color: rgb(200,3,200);
 }
 
+@media (hover: hover) {
+    /* devices that can hover*/
+    .overlay:hover {
+        opacity:0.9;
+    }
+}
+
+@media (hover: none) {
+    /* devices that can not hover*/
+    .overlay.active {
+        opacity: 0.9;
+    }
+}
+
+/* all small screena*/
 @media screen and (max-width: 800px) {
     .projects img {
         width: 90vw;
@@ -573,11 +582,16 @@ body {
     .overlay {
         width: 90vw;
         height: 95%;
-        font-size: 10px;
+        font-size: 2vw;
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        justify-content: left;
     }
 
     .overlay p, .overlay ul {
         padding-bottom: 10px;
+        word-wrap:break-word;
     }
 }
 

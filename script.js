@@ -1,32 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const touchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const mediaScreen = window.matchMedia('(max-width: 800px');
-
-    function addClick() {
-        const overlays=document.querySelectorAll('.overlay');
-        overlays.forEach(x => {
-                x.addEventListener('click', handleClick);
-        });
-    }
-
-    function removeClick() {
-        const overlays=document.querySelectorAll('.overlay');
-        overlays.forEach(x => {
-                x.removeEventListener('click', handleClick);
-        });
-    }
-
-    function handleClick(event) {
-        event.currentTarget.classList.toggle('active');
-    }
-
-    // check if device is touch screen
-    if(touchDevice && mediaScreen.matches) {
-        addClick();
-    } else {
-        removeClick();
-    }
-
     const projects = document.querySelectorAll(".projects figure");
     let i = 0;
 
@@ -51,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
         function displayProject(i) {
-            console.log("WORKED!");
             // Remove any displayed images
             projects.forEach(x => {x.classList.remove("active");});
         
@@ -70,6 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("This is i after click: "+i);
             displayProject(i);
         }
+    
+    const overlays = document.querySelectorAll('.overlay');
+    for(let j=0; j<overlays.length; j++) {
+        overlays[j].addEventListener('click', function() { 
+            overlays[j].classList.toggle('active');
+        });
+    }
 });
 
 
