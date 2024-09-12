@@ -1,4 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const touchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const mediaScreen = window.matchMedia('(max-width: 800px');
+
+    function addClick() {
+        const overlays=document.querySelectorAll('.overlay');
+        overlays.forEach(x => {
+                x.addEventListener('click', handleClick);
+        });
+    }
+
+    function removeClick() {
+        const overlays=document.querySelectorAll('.overlay');
+        overlays.forEach(x => {
+                x.removeEventListener('click', handleClick);
+        });
+    }
+
+    function handleClick(event) {
+        event.currentTarget.classList.toggle('active');
+    }
+
+    // check if device is touch screen
+    if(touchDevice && mediaScreen.matches) {
+        addClick();
+    } else {
+        removeClick();
+    }
+
     const projects = document.querySelectorAll(".projects figure");
     let i = 0;
 

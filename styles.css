@@ -529,6 +529,10 @@ body {
     opacity: 0.9;
 }
 
+.overlay.active {
+    opacity: 0.9;
+}
+
 .projects figure figcaption a {
     z-index: 10;
 }
