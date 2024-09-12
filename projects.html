@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body class="noScroll">
+    <div class="bg" id="noScrollBG">
+        <div class="static"></div>
+<!---------------------- Navigation Bar ------------------------->
+        <header>
+            <nav class="myNav">
+                <div class="navBar">
+                    <a href="index.html" id="navLogo">[Joshua]</a>
+                    <div class="navToggle" id="mobile">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navMenu">
+                        <li class="navItem">
+                            <a href="aboutMe.html" class="navLinks">|About Me|</a>
+                        </li>
+                        <li class="navItem">
+                            <a href="projects.html" class="navLinks">|Projects|</a>
+                        </li>
+                        <li class="navItem">
+                            <a href="contact.html" class="navLinks">|Contact|</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="slideshow">
+            <div class="projects">
+                <figure>
+                    <div class="picture">
+                        <img class="project" src="images/project1.png" alt="project 1">
+                        <div class="overlay">
+                            <p class="retro">
+                                This is a portfolio website I've built using HTML, CSS, and JavaScript.
+                            </p>
+                            <p class="retro">
+                                <strong>Here, you will find:</strong>
+                            </p>
+                            <ul class="retro">
+                                <li>Information about my background, experiences, and hobbies.</li>
+                                <li>A summary of the skills that I have mastered.</li>
+                                <li>A detailed showcase of my coding projects.</li>
+                                <li>Ways to get in contact with me.</li>
+                            </ul>
+                            <p class="retro">
+                                Work still in Progress!
+                            </p>
+                        </div>
+                    </div>
+                    <figcaption class="retro">Portfolio Website</figcaption>
+                    <figcaption><a href="https://github.com/jaozomar/myPortfolio.git" class="retro" target="_blank">GitHub Link</a></figcaption>
+                    <button class="slideBtn" onclick="otherProject()">SEE JAVA SOCIAL NETWORK PROJECT</button>
+                </figure>
+                <figure>
+                    <div class="picture">
+                        <img class="project" src="images/project2.png" alt="project 2">
+                        <div class="overlay" id="overlay2">
+                            <p class="retro">
+                                Developed an extensive Java-based social network 
+                                as part of a data structures class. The project, 
+                                completed in collaboration with three other students, 
+                                involved implementing hash tables to manage user accounts 
+                                and a graph system to handle friend connections.
+                            </p>
+                            <p class="retro">
+                                <strong>Features Include:</strong>
+                            </p>
+                            <ul class="retro">
+                                <li>
+                                    Adding and updating profiles with usernames, images, friends, 
+                                    and online statuses.
+                                </li>
+                                <li>
+                                    Adding and removing friend connections, with the functionality 
+                                    to view all friend connections at any time.
+                                </li>
+                                <li>
+                                    Searching for profiles within the network and viewing all profiles 
+                                    currently in the network.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <figcaption class="retro">Java Social Network</figcaption>
+                    <figcaption><a href="https://github.com/jaozomar/socialNetwork.git" class="retro" target="_blank">GitHub Link</a></figcaption>
+                    <button class="slideBtn" onclick="otherProject()">SEE PORTFOLIO WEBSITE PROJECT</button>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerBar">
+            <p>Joshua Alexander Ozomaro 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
