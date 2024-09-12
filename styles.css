@@ -322,7 +322,7 @@ body {
 }
 
 .aboutContainer {
-    padding: 60px 80px;
+    padding: 20px 80px;
 }
 
 .row {
@@ -468,8 +468,14 @@ body {
 
 /*----------------------------------------- PROJECTS ------------------------------------*/
 
+#title3 {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(200,3,200);
+}
+
 .slideshow {
-    padding-top: 30px;
     overflow:hidden;
     display: flex;
     flex-direction: column;
