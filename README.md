@@ -10,5 +10,4 @@ This is a portfolio website I've built using HTML, CSS, and JavaScript.
 
 **Skills enhanced:** HTML, CSS, Javascript, front-end development, and web design.
 
-Work still in Progress!
 [Website Link](https://jaozomar.github.io/myPortfolio/)
